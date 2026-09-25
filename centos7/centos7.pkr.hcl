@@ -16,33 +16,33 @@ variable "filename" {
 
 variable "centos7_iso_url" {
   type    = string
-  default = "https://mirrors.edge.kernel.org/centos/7/isos/x86_64/CentOS-7-x86_64-NetInstall-2009.iso"
+  default = "https://archive.kernel.org/centos-vault/7.9.2009/isos/x86_64/CentOS-7-x86_64-NetInstall-2009.iso"
 }
 
 variable "centos7_sha256sum_url" {
   type    = string
-  default = "https://mirrors.edge.kernel.org/centos/7/isos/x86_64/sha256sum.txt"
+  default = "https://archive.kernel.org/centos-vault/7.9.2009/isos/x86_64/sha256sum.txt"
 }
 
 # use can use "--url" to specify the exact url for os repo
 # for ex. "--url='https://archive.kernel.org/centos-vault/7.9.2009/os/x86_64'"
 variable "ks_os_repos" {
   type    = string
-  default = "--mirrorlist='http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os'"
+  default = "https://archive.kernel.org/centos-vault/7.9.2009/os/x86_64/"
 }
 
 # Use --baseurl to specify the exact url for updates repo
 # for ex. "--baseurl='https://archive.kernel.org/centos-vault/7.9.2009/updates/x86_64'"
 variable "ks_updates_repos" {
   type    = string
-  default = "--mirrorlist='http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates'"
+  default = "https://archive.kernel.org/centos-vault/7.9.2009/updates/x86_64/"
 }
 
 # Use --baseurl to specify the exact url for extras repo
 # for ex. "--baseurl='https://archive.kernel.org/centos-vault/7.9.2009/extras/x86_64'"
 variable "ks_extras_repos" {
   type    = string
-  default = "--mirrorlist='http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=extras'"
+  default = "https://archive.kernel.org/centos-vault/7.9.2009/extras/x86_64/"
 }
 
 variable ks_proxy {
